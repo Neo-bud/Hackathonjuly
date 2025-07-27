@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Text Slideshow</title>
+</head>
+<body>
+    <div class="image-container">
+        <img src="https://uploads.onecompiler.io/43rv4ev89/43rv44rw6/Screenshot%202025-07-26%20at%204.44.51%E2%80%AFPM.png" width="1000" alt="Background Image">
+        <div class="overlay-text">
+            <h1>Save The Environment, Save The World</h1>
+            <p>This image shows a forest with a bunch of trees, but save this photo because one day, they might all be gone!<br>
+            Biodiversity, as the name suggests, is the variety of species here on Earth. It is extremely important for many reasons.
+            </p>
+        </div>
+    </div>
+
+<p id="slide" style="font-size:20px; white-space:pre-line;"></p>
+
+<br>
+<button onclick="prev()">Previous</button>
+<button onclick="next()">Next</button>
+
+<script>
+let slides = [
+  `Bacteria and Viruses:
+Many viruses and pandemics had an outbreak after the biodiversity of the place reduced.
+Imagine if you are a virus, and you need a host to multiply. 
+You normally would use the variety of species you had, but now the biodiversity has gone down in your area, so you have fewer options. 
+Over time, your only choice becomes humans... and then something like Covid-19 happens, and we humans all get sick. 
+We need biodiversity to protect us from pathogens and other diseases.`,
+  
+  `Economy:
+Our economy depends on forests. From lumber to paper, we need trees! 
+A forest is the best example of biodiversity. All the varieties of plants, animals, and decomposers help the ecosystem thrive. 
+With a sudden decrease in biodiversity, the balance in the ecosystem would be disrupted, and plants and animals will die off, including trees. 
+Then the economy will tumble down because lumber and paper products will all be gone.`,
+
+  `Culture:
+Over centuries, people have adapted to the place where they lived, through culture. 
+Their culture doesn't just represent their beliefs, but also the place around them. 
+The species there, the types of trees and plants, and the food that they eat.
+They use their surroundings to their benefit, but without biodiversity, they won't even have plants or animals they can use. 
+The different plants and animals sustain themselves and keep populations in check, but if biodiversity goes down, one dominant apex predator could make all other species extinct. 
+Eventually, it will starve to extinction, and the culture that depended on those animals and plants might be wiped out.`
+];
+
+let i = 0;
+
+function showSlide() {
+  document.getElementById("slide").textContent = slides[i];
+}
+
+function next() {
+  i = (i + 1) % slides.length;
+  showSlide();
+}
+
+function prev() {
+  i = (i - 1 + slides.length) % slides.length;
+  showSlide();
+}
+
+showSlide();
+</script>
+
+<hr>
+<h2>How to Help</h2>
+<p>
+If you think that just you yourself cannot make a change in biodiversity, then you're wrong.
+You can help in so many ways. 
+First, stop using pesticides. They kill good organisms that PROTECT your plants, and it disrupts the food chain, reducing biodiversity.
+Then, talk with your neighbor and ask them to stop using pesticides. Eventually, talk with your community, and lead them into the bright, leafy, green world.
+</p>
+
+<figure>
+  <img src="https://uploads.onecompiler.io/43rv4ev89/43rv8tk4y/Screenshot%202025-07-26%20at%206.06.55%E2%80%AFPM.png" width="600">
+  <figcaption>
+    These are some places near Plano, TX. You can help the environment by going there and learning about the environment in Texas. 
+    You can implement those ideas you found there—maybe go pick up trash in a park or buy native pollinators and put them in your backyard.
+  </figcaption>
+</figure>
+
+<hr>
+<h2>Photo Gallery</h2>
+<img id="gallery-slide" src="https://picsum.photos/id/1015/600/400" width="600">
+
+<br><br>
+<button onclick="prevGallery()">Previous</button>
+<button onclick="nextGallery()">Next</button>
+
+<script>
+let gallerySlides = [
+  "https://uploads.onecompiler.io/43rv4ev89/43rv8tk4y/Screenshot%202025-07-26%20at%206.14.55%E2%80%AFPM.png",
+  "https://picsum.photos/id/1016/600/400",
+  "https://picsum.photos/id/1018/600/400",
+  "https://uploads.onecompiler.io/43rv4ev89/43rv8tk4y/Screenshot%202025-07-26%20at%206.58.55%E2%80%AFPM.png"
+];
+
+let galleryIndex = 0;
+
+function showGallerySlide() {
+  document.getElementById("gallery-slide").src = gallerySlides[galleryIndex];
+}
+
+function nextGallery() {
+  galleryIndex = (galleryIndex + 1) % gallerySlides.length;
+  showGallerySlide();
+}
+
+function prevGallery() {
+  galleryIndex = (galleryIndex - 1 + gallerySlides.length) % gallerySlides.length;
+  showGallerySlide();
+}
+
+showGallerySlide();
+</script>
+
+<hr>
+<h2>Credits</h2>
+<p>
+Created by Amrit Sai Arasamangalam.  
+Photos: Picsum and Unsplash  
+Information Sources:
+</p>
+<ol>
+  <li><a href="https://www.scribd.com/presentation/547491933/Biodiversity-EST" target="_blank">https://www.scribd.com/presentation/547491933/Biodiversity-EST</a></li>
+  <li><a href="https://www.ran.org/issue/biodiversity-earths-million-piece-puzzle/?gad_source=1&gad_campaignid=171171288&gbraid=0AAAAADqv6sjJ7l-IS5VTUEX1t9KYzsy20&gclid=Cj0KCQjw-ZHEBhCxARIsAGGN96KijMzg-_Leq9VQJA_9VRBZx_DrRBHguMQxq7Gi_UQwcS7VY-NJLn8aAiZHEALw_wcB" target="_blank">https://www.ran.org/issue/biodiversity-earths-million-piece-puzzle/</a></li>
+  <li><a href="https://www.pan-europe.info/issues/pesticides-and-loss-biodiversity" target="_blank">https://www.pan-europe.info/issues/pesticides-and-loss-biodiversity</a></li>
+</ol>
+<p>and more websites.</p>
+
+</body>
+</html>
